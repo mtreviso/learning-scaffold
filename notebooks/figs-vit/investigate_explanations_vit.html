@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>investigate explanations vit</title>
+
+	<style type="text/css">
+		.exampe img{
+			float:  left;
+			border: 1px solid #333;
+
+		}
+		.titles span{
+			float:  left;
+			width:  96px;
+			display: block;
+			margin-left: 5px;
+		}
+		.example, .titles{
+			clear: both;
+		}	
+	</style>
+
+</head>
+<body>
+
+<div class="titles">
+<span>1044:wardrobe</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1044:wardrobe:wardrobe/image.png" width="96px" />
+<img src="1044:wardrobe:wardrobe/attention_learned.png" width="96px" />
+<img src="1044:wardrobe:wardrobe/attention_last_layer.png" width="96px" />
+<img src="1044:wardrobe:wardrobe/attention_all_layers.png" width="96px" />
+<img src="1044:wardrobe:wardrobe/gradient_x_input.png" width="96px" />
+<img src="1044:wardrobe:wardrobe/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1057:skyscraper</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1057:skyscraper:skyscraper/image.png" width="96px" />
+<img src="1057:skyscraper:skyscraper/attention_learned.png" width="96px" />
+<img src="1057:skyscraper:skyscraper/attention_last_layer.png" width="96px" />
+<img src="1057:skyscraper:skyscraper/attention_all_layers.png" width="96px" />
+<img src="1057:skyscraper:skyscraper/gradient_x_input.png" width="96px" />
+<img src="1057:skyscraper:skyscraper/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1073:squirrel</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1073:squirrel:squirrel/image.png" width="96px" />
+<img src="1073:squirrel:squirrel/attention_learned.png" width="96px" />
+<img src="1073:squirrel:squirrel/attention_last_layer.png" width="96px" />
+<img src="1073:squirrel:squirrel/attention_all_layers.png" width="96px" />
+<img src="1073:squirrel:squirrel/gradient_x_input.png" width="96px" />
+<img src="1073:squirrel:squirrel/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1075:boy</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1075:boy:boy/image.png" width="96px" />
+<img src="1075:boy:boy/attention_learned.png" width="96px" />
+<img src="1075:boy:boy/attention_last_layer.png" width="96px" />
+<img src="1075:boy:boy/attention_all_layers.png" width="96px" />
+<img src="1075:boy:boy/gradient_x_input.png" width="96px" />
+<img src="1075:boy:boy/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1112:sunflower</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1112:sunflower:sunflower/image.png" width="96px" />
+<img src="1112:sunflower:sunflower/attention_learned.png" width="96px" />
+<img src="1112:sunflower:sunflower/attention_last_layer.png" width="96px" />
+<img src="1112:sunflower:sunflower/attention_all_layers.png" width="96px" />
+<img src="1112:sunflower:sunflower/gradient_x_input.png" width="96px" />
+<img src="1112:sunflower:sunflower/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>114:butterfly</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="114:butterfly:butterfly/image.png" width="96px" />
+<img src="114:butterfly:butterfly/attention_learned.png" width="96px" />
+<img src="114:butterfly:butterfly/attention_last_layer.png" width="96px" />
+<img src="114:butterfly:butterfly/attention_all_layers.png" width="96px" />
+<img src="114:butterfly:butterfly/gradient_x_input.png" width="96px" />
+<img src="114:butterfly:butterfly/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1157:girl</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1157:girl:baby/image.png" width="96px" />
+<img src="1157:girl:baby/attention_learned.png" width="96px" />
+<img src="1157:girl:baby/attention_last_layer.png" width="96px" />
+<img src="1157:girl:baby/attention_all_layers.png" width="96px" />
+<img src="1157:girl:baby/gradient_x_input.png" width="96px" />
+<img src="1157:girl:baby/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1164:bicycle</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1164:bicycle:bicycle/image.png" width="96px" />
+<img src="1164:bicycle:bicycle/attention_learned.png" width="96px" />
+<img src="1164:bicycle:bicycle/attention_last_layer.png" width="96px" />
+<img src="1164:bicycle:bicycle/attention_all_layers.png" width="96px" />
+<img src="1164:bicycle:bicycle/gradient_x_input.png" width="96px" />
+<img src="1164:bicycle:bicycle/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1209:raccoon</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1209:raccoon:raccoon/image.png" width="96px" />
+<img src="1209:raccoon:raccoon/attention_learned.png" width="96px" />
+<img src="1209:raccoon:raccoon/attention_last_layer.png" width="96px" />
+<img src="1209:raccoon:raccoon/attention_all_layers.png" width="96px" />
+<img src="1209:raccoon:raccoon/gradient_x_input.png" width="96px" />
+<img src="1209:raccoon:raccoon/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1337:clock</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1337:clock:clock/image.png" width="96px" />
+<img src="1337:clock:clock/attention_learned.png" width="96px" />
+<img src="1337:clock:clock/attention_last_layer.png" width="96px" />
+<img src="1337:clock:clock/attention_all_layers.png" width="96px" />
+<img src="1337:clock:clock/gradient_x_input.png" width="96px" />
+<img src="1337:clock:clock/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1343:keyboard</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1343:keyboard:keyboard/image.png" width="96px" />
+<img src="1343:keyboard:keyboard/attention_learned.png" width="96px" />
+<img src="1343:keyboard:keyboard/attention_last_layer.png" width="96px" />
+<img src="1343:keyboard:keyboard/attention_all_layers.png" width="96px" />
+<img src="1343:keyboard:keyboard/gradient_x_input.png" width="96px" />
+<img src="1343:keyboard:keyboard/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1384:dolphin</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1384:dolphin:dolphin/image.png" width="96px" />
+<img src="1384:dolphin:dolphin/attention_learned.png" width="96px" />
+<img src="1384:dolphin:dolphin/attention_last_layer.png" width="96px" />
+<img src="1384:dolphin:dolphin/attention_all_layers.png" width="96px" />
+<img src="1384:dolphin:dolphin/gradient_x_input.png" width="96px" />
+<img src="1384:dolphin:dolphin/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1419:kangaroo</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1419:kangaroo:kangaroo/image.png" width="96px" />
+<img src="1419:kangaroo:kangaroo/attention_learned.png" width="96px" />
+<img src="1419:kangaroo:kangaroo/attention_last_layer.png" width="96px" />
+<img src="1419:kangaroo:kangaroo/attention_all_layers.png" width="96px" />
+<img src="1419:kangaroo:kangaroo/gradient_x_input.png" width="96px" />
+<img src="1419:kangaroo:kangaroo/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1427:sunflower</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1427:sunflower:sunflower/image.png" width="96px" />
+<img src="1427:sunflower:sunflower/attention_learned.png" width="96px" />
+<img src="1427:sunflower:sunflower/attention_last_layer.png" width="96px" />
+<img src="1427:sunflower:sunflower/attention_all_layers.png" width="96px" />
+<img src="1427:sunflower:sunflower/gradient_x_input.png" width="96px" />
+<img src="1427:sunflower:sunflower/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>143:butterfly</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="143:butterfly:butterfly/image.png" width="96px" />
+<img src="143:butterfly:butterfly/attention_learned.png" width="96px" />
+<img src="143:butterfly:butterfly/attention_last_layer.png" width="96px" />
+<img src="143:butterfly:butterfly/attention_all_layers.png" width="96px" />
+<img src="143:butterfly:butterfly/gradient_x_input.png" width="96px" />
+<img src="143:butterfly:butterfly/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1483:fox</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1483:fox:fox/image.png" width="96px" />
+<img src="1483:fox:fox/attention_learned.png" width="96px" />
+<img src="1483:fox:fox/attention_last_layer.png" width="96px" />
+<img src="1483:fox:fox/attention_all_layers.png" width="96px" />
+<img src="1483:fox:fox/gradient_x_input.png" width="96px" />
+<img src="1483:fox:fox/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1553:streetcar</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1553:streetcar:streetcar/image.png" width="96px" />
+<img src="1553:streetcar:streetcar/attention_learned.png" width="96px" />
+<img src="1553:streetcar:streetcar/attention_last_layer.png" width="96px" />
+<img src="1553:streetcar:streetcar/attention_all_layers.png" width="96px" />
+<img src="1553:streetcar:streetcar/gradient_x_input.png" width="96px" />
+<img src="1553:streetcar:streetcar/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1566:cockroach</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1566:cockroach:cockroach/image.png" width="96px" />
+<img src="1566:cockroach:cockroach/attention_learned.png" width="96px" />
+<img src="1566:cockroach:cockroach/attention_last_layer.png" width="96px" />
+<img src="1566:cockroach:cockroach/attention_all_layers.png" width="96px" />
+<img src="1566:cockroach:cockroach/gradient_x_input.png" width="96px" />
+<img src="1566:cockroach:cockroach/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>158:flatfish</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="158:flatfish:flatfish/image.png" width="96px" />
+<img src="158:flatfish:flatfish/attention_learned.png" width="96px" />
+<img src="158:flatfish:flatfish/attention_last_layer.png" width="96px" />
+<img src="158:flatfish:flatfish/attention_all_layers.png" width="96px" />
+<img src="158:flatfish:flatfish/gradient_x_input.png" width="96px" />
+<img src="158:flatfish:flatfish/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1624:lizard</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1624:lizard:lizard/image.png" width="96px" />
+<img src="1624:lizard:lizard/attention_learned.png" width="96px" />
+<img src="1624:lizard:lizard/attention_last_layer.png" width="96px" />
+<img src="1624:lizard:lizard/attention_all_layers.png" width="96px" />
+<img src="1624:lizard:lizard/gradient_x_input.png" width="96px" />
+<img src="1624:lizard:lizard/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1658:keyboard</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1658:keyboard:keyboard/image.png" width="96px" />
+<img src="1658:keyboard:keyboard/attention_learned.png" width="96px" />
+<img src="1658:keyboard:keyboard/attention_last_layer.png" width="96px" />
+<img src="1658:keyboard:keyboard/attention_all_layers.png" width="96px" />
+<img src="1658:keyboard:keyboard/gradient_x_input.png" width="96px" />
+<img src="1658:keyboard:keyboard/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1687:worm</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1687:worm:worm/image.png" width="96px" />
+<img src="1687:worm:worm/attention_learned.png" width="96px" />
+<img src="1687:worm:worm/attention_last_layer.png" width="96px" />
+<img src="1687:worm:worm/attention_all_layers.png" width="96px" />
+<img src="1687:worm:worm/gradient_x_input.png" width="96px" />
+<img src="1687:worm:worm/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1855:orchid</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1855:orchid:orchid/image.png" width="96px" />
+<img src="1855:orchid:orchid/attention_learned.png" width="96px" />
+<img src="1855:orchid:orchid/attention_last_layer.png" width="96px" />
+<img src="1855:orchid:orchid/attention_all_layers.png" width="96px" />
+<img src="1855:orchid:orchid/gradient_x_input.png" width="96px" />
+<img src="1855:orchid:orchid/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1921:plain</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1921:plain:plain/image.png" width="96px" />
+<img src="1921:plain:plain/attention_learned.png" width="96px" />
+<img src="1921:plain:plain/attention_last_layer.png" width="96px" />
+<img src="1921:plain:plain/attention_all_layers.png" width="96px" />
+<img src="1921:plain:plain/gradient_x_input.png" width="96px" />
+<img src="1921:plain:plain/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>1950:lawn_mower</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="1950:lawn_mower:lawn_mower/image.png" width="96px" />
+<img src="1950:lawn_mower:lawn_mower/attention_learned.png" width="96px" />
+<img src="1950:lawn_mower:lawn_mower/attention_last_layer.png" width="96px" />
+<img src="1950:lawn_mower:lawn_mower/attention_all_layers.png" width="96px" />
+<img src="1950:lawn_mower:lawn_mower/gradient_x_input.png" width="96px" />
+<img src="1950:lawn_mower:lawn_mower/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2038:maple_tree</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2038:maple_tree:maple_tree/image.png" width="96px" />
+<img src="2038:maple_tree:maple_tree/attention_learned.png" width="96px" />
+<img src="2038:maple_tree:maple_tree/attention_last_layer.png" width="96px" />
+<img src="2038:maple_tree:maple_tree/attention_all_layers.png" width="96px" />
+<img src="2038:maple_tree:maple_tree/gradient_x_input.png" width="96px" />
+<img src="2038:maple_tree:maple_tree/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2052:lawn_mower</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2052:lawn_mower:lawn_mower/image.png" width="96px" />
+<img src="2052:lawn_mower:lawn_mower/attention_learned.png" width="96px" />
+<img src="2052:lawn_mower:lawn_mower/attention_last_layer.png" width="96px" />
+<img src="2052:lawn_mower:lawn_mower/attention_all_layers.png" width="96px" />
+<img src="2052:lawn_mower:lawn_mower/gradient_x_input.png" width="96px" />
+<img src="2052:lawn_mower:lawn_mower/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2114:bicycle</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2114:bicycle:bicycle/image.png" width="96px" />
+<img src="2114:bicycle:bicycle/attention_learned.png" width="96px" />
+<img src="2114:bicycle:bicycle/attention_last_layer.png" width="96px" />
+<img src="2114:bicycle:bicycle/attention_all_layers.png" width="96px" />
+<img src="2114:bicycle:bicycle/gradient_x_input.png" width="96px" />
+<img src="2114:bicycle:bicycle/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2172:tiger</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2172:tiger:tiger/image.png" width="96px" />
+<img src="2172:tiger:tiger/attention_learned.png" width="96px" />
+<img src="2172:tiger:tiger/attention_last_layer.png" width="96px" />
+<img src="2172:tiger:tiger/attention_all_layers.png" width="96px" />
+<img src="2172:tiger:tiger/gradient_x_input.png" width="96px" />
+<img src="2172:tiger:tiger/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2185:lawn_mower</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2185:lawn_mower:lawn_mower/image.png" width="96px" />
+<img src="2185:lawn_mower:lawn_mower/attention_learned.png" width="96px" />
+<img src="2185:lawn_mower:lawn_mower/attention_last_layer.png" width="96px" />
+<img src="2185:lawn_mower:lawn_mower/attention_all_layers.png" width="96px" />
+<img src="2185:lawn_mower:lawn_mower/gradient_x_input.png" width="96px" />
+<img src="2185:lawn_mower:lawn_mower/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>220:turtle</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="220:turtle:turtle/image.png" width="96px" />
+<img src="220:turtle:turtle/attention_learned.png" width="96px" />
+<img src="220:turtle:turtle/attention_last_layer.png" width="96px" />
+<img src="220:turtle:turtle/attention_all_layers.png" width="96px" />
+<img src="220:turtle:turtle/gradient_x_input.png" width="96px" />
+<img src="220:turtle:turtle/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2276:woman</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2276:woman:woman/image.png" width="96px" />
+<img src="2276:woman:woman/attention_learned.png" width="96px" />
+<img src="2276:woman:woman/attention_last_layer.png" width="96px" />
+<img src="2276:woman:woman/attention_all_layers.png" width="96px" />
+<img src="2276:woman:woman/gradient_x_input.png" width="96px" />
+<img src="2276:woman:woman/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2357:plate</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2357:plate:plate/image.png" width="96px" />
+<img src="2357:plate:plate/attention_learned.png" width="96px" />
+<img src="2357:plate:plate/attention_last_layer.png" width="96px" />
+<img src="2357:plate:plate/attention_all_layers.png" width="96px" />
+<img src="2357:plate:plate/gradient_x_input.png" width="96px" />
+<img src="2357:plate:plate/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2372:fox</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2372:fox:fox/image.png" width="96px" />
+<img src="2372:fox:fox/attention_learned.png" width="96px" />
+<img src="2372:fox:fox/attention_last_layer.png" width="96px" />
+<img src="2372:fox:fox/attention_all_layers.png" width="96px" />
+<img src="2372:fox:fox/gradient_x_input.png" width="96px" />
+<img src="2372:fox:fox/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2391:dinosaur</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2391:dinosaur:otter/image.png" width="96px" />
+<img src="2391:dinosaur:otter/attention_learned.png" width="96px" />
+<img src="2391:dinosaur:otter/attention_last_layer.png" width="96px" />
+<img src="2391:dinosaur:otter/attention_all_layers.png" width="96px" />
+<img src="2391:dinosaur:otter/gradient_x_input.png" width="96px" />
+<img src="2391:dinosaur:otter/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2420:cup</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2420:cup:cup/image.png" width="96px" />
+<img src="2420:cup:cup/attention_learned.png" width="96px" />
+<img src="2420:cup:cup/attention_last_layer.png" width="96px" />
+<img src="2420:cup:cup/attention_all_layers.png" width="96px" />
+<img src="2420:cup:cup/gradient_x_input.png" width="96px" />
+<img src="2420:cup:cup/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2444:crocodile</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2444:crocodile:crocodile/image.png" width="96px" />
+<img src="2444:crocodile:crocodile/attention_learned.png" width="96px" />
+<img src="2444:crocodile:crocodile/attention_last_layer.png" width="96px" />
+<img src="2444:crocodile:crocodile/attention_all_layers.png" width="96px" />
+<img src="2444:crocodile:crocodile/gradient_x_input.png" width="96px" />
+<img src="2444:crocodile:crocodile/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>245:dinosaur</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="245:dinosaur:dinosaur/image.png" width="96px" />
+<img src="245:dinosaur:dinosaur/attention_learned.png" width="96px" />
+<img src="245:dinosaur:dinosaur/attention_last_layer.png" width="96px" />
+<img src="245:dinosaur:dinosaur/attention_all_layers.png" width="96px" />
+<img src="245:dinosaur:dinosaur/gradient_x_input.png" width="96px" />
+<img src="245:dinosaur:dinosaur/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2507:tulip</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2507:tulip:tulip/image.png" width="96px" />
+<img src="2507:tulip:tulip/attention_learned.png" width="96px" />
+<img src="2507:tulip:tulip/attention_last_layer.png" width="96px" />
+<img src="2507:tulip:tulip/attention_all_layers.png" width="96px" />
+<img src="2507:tulip:tulip/gradient_x_input.png" width="96px" />
+<img src="2507:tulip:tulip/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2559:worm</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2559:worm:worm/image.png" width="96px" />
+<img src="2559:worm:worm/attention_learned.png" width="96px" />
+<img src="2559:worm:worm/attention_last_layer.png" width="96px" />
+<img src="2559:worm:worm/attention_all_layers.png" width="96px" />
+<img src="2559:worm:worm/gradient_x_input.png" width="96px" />
+<img src="2559:worm:worm/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2595:chimpanzee</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2595:chimpanzee:chimpanzee/image.png" width="96px" />
+<img src="2595:chimpanzee:chimpanzee/attention_learned.png" width="96px" />
+<img src="2595:chimpanzee:chimpanzee/attention_last_layer.png" width="96px" />
+<img src="2595:chimpanzee:chimpanzee/attention_all_layers.png" width="96px" />
+<img src="2595:chimpanzee:chimpanzee/gradient_x_input.png" width="96px" />
+<img src="2595:chimpanzee:chimpanzee/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2651:pear</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2651:pear:pear/image.png" width="96px" />
+<img src="2651:pear:pear/attention_learned.png" width="96px" />
+<img src="2651:pear:pear/attention_last_layer.png" width="96px" />
+<img src="2651:pear:pear/attention_all_layers.png" width="96px" />
+<img src="2651:pear:pear/gradient_x_input.png" width="96px" />
+<img src="2651:pear:pear/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2710:cattle</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2710:cattle:cattle/image.png" width="96px" />
+<img src="2710:cattle:cattle/attention_learned.png" width="96px" />
+<img src="2710:cattle:cattle/attention_last_layer.png" width="96px" />
+<img src="2710:cattle:cattle/attention_all_layers.png" width="96px" />
+<img src="2710:cattle:cattle/gradient_x_input.png" width="96px" />
+<img src="2710:cattle:cattle/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>274:bowl</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="274:bowl:can/image.png" width="96px" />
+<img src="274:bowl:can/attention_learned.png" width="96px" />
+<img src="274:bowl:can/attention_last_layer.png" width="96px" />
+<img src="274:bowl:can/attention_all_layers.png" width="96px" />
+<img src="274:bowl:can/gradient_x_input.png" width="96px" />
+<img src="274:bowl:can/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2779:fox</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2779:fox:fox/image.png" width="96px" />
+<img src="2779:fox:fox/attention_learned.png" width="96px" />
+<img src="2779:fox:fox/attention_last_layer.png" width="96px" />
+<img src="2779:fox:fox/attention_all_layers.png" width="96px" />
+<img src="2779:fox:fox/gradient_x_input.png" width="96px" />
+<img src="2779:fox:fox/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2802:porcupine</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2802:porcupine:porcupine/image.png" width="96px" />
+<img src="2802:porcupine:porcupine/attention_learned.png" width="96px" />
+<img src="2802:porcupine:porcupine/attention_last_layer.png" width="96px" />
+<img src="2802:porcupine:porcupine/attention_all_layers.png" width="96px" />
+<img src="2802:porcupine:porcupine/gradient_x_input.png" width="96px" />
+<img src="2802:porcupine:porcupine/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2846:maple_tree</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2846:maple_tree:oak_tree/image.png" width="96px" />
+<img src="2846:maple_tree:oak_tree/attention_learned.png" width="96px" />
+<img src="2846:maple_tree:oak_tree/attention_last_layer.png" width="96px" />
+<img src="2846:maple_tree:oak_tree/attention_all_layers.png" width="96px" />
+<img src="2846:maple_tree:oak_tree/gradient_x_input.png" width="96px" />
+<img src="2846:maple_tree:oak_tree/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2888:skyscraper</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2888:skyscraper:skyscraper/image.png" width="96px" />
+<img src="2888:skyscraper:skyscraper/attention_learned.png" width="96px" />
+<img src="2888:skyscraper:skyscraper/attention_last_layer.png" width="96px" />
+<img src="2888:skyscraper:skyscraper/attention_all_layers.png" width="96px" />
+<img src="2888:skyscraper:skyscraper/gradient_x_input.png" width="96px" />
+<img src="2888:skyscraper:skyscraper/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2902:worm</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2902:worm:worm/image.png" width="96px" />
+<img src="2902:worm:worm/attention_learned.png" width="96px" />
+<img src="2902:worm:worm/attention_last_layer.png" width="96px" />
+<img src="2902:worm:worm/attention_all_layers.png" width="96px" />
+<img src="2902:worm:worm/gradient_x_input.png" width="96px" />
+<img src="2902:worm:worm/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2916:cockroach</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2916:cockroach:cockroach/image.png" width="96px" />
+<img src="2916:cockroach:cockroach/attention_learned.png" width="96px" />
+<img src="2916:cockroach:cockroach/attention_last_layer.png" width="96px" />
+<img src="2916:cockroach:cockroach/attention_all_layers.png" width="96px" />
+<img src="2916:cockroach:cockroach/gradient_x_input.png" width="96px" />
+<img src="2916:cockroach:cockroach/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>2941:boy</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="2941:boy:boy/image.png" width="96px" />
+<img src="2941:boy:boy/attention_learned.png" width="96px" />
+<img src="2941:boy:boy/attention_last_layer.png" width="96px" />
+<img src="2941:boy:boy/attention_all_layers.png" width="96px" />
+<img src="2941:boy:boy/gradient_x_input.png" width="96px" />
+<img src="2941:boy:boy/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>3243:ray</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="3243:ray:ray/image.png" width="96px" />
+<img src="3243:ray:ray/attention_learned.png" width="96px" />
+<img src="3243:ray:ray/attention_last_layer.png" width="96px" />
+<img src="3243:ray:ray/attention_all_layers.png" width="96px" />
+<img src="3243:ray:ray/gradient_x_input.png" width="96px" />
+<img src="3243:ray:ray/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>3350:table</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="3350:table:table/image.png" width="96px" />
+<img src="3350:table:table/attention_learned.png" width="96px" />
+<img src="3350:table:table/attention_last_layer.png" width="96px" />
+<img src="3350:table:table/attention_all_layers.png" width="96px" />
+<img src="3350:table:table/gradient_x_input.png" width="96px" />
+<img src="3350:table:table/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>3367:otter</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="3367:otter:otter/image.png" width="96px" />
+<img src="3367:otter:otter/attention_learned.png" width="96px" />
+<img src="3367:otter:otter/attention_last_layer.png" width="96px" />
+<img src="3367:otter:otter/attention_all_layers.png" width="96px" />
+<img src="3367:otter:otter/gradient_x_input.png" width="96px" />
+<img src="3367:otter:otter/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>3394:tulip</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="3394:tulip:tulip/image.png" width="96px" />
+<img src="3394:tulip:tulip/attention_learned.png" width="96px" />
+<img src="3394:tulip:tulip/attention_last_layer.png" width="96px" />
+<img src="3394:tulip:tulip/attention_all_layers.png" width="96px" />
+<img src="3394:tulip:tulip/gradient_x_input.png" width="96px" />
+<img src="3394:tulip:tulip/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>33:butterfly</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="33:butterfly:butterfly/image.png" width="96px" />
+<img src="33:butterfly:butterfly/attention_learned.png" width="96px" />
+<img src="33:butterfly:butterfly/attention_last_layer.png" width="96px" />
+<img src="33:butterfly:butterfly/attention_all_layers.png" width="96px" />
+<img src="33:butterfly:butterfly/gradient_x_input.png" width="96px" />
+<img src="33:butterfly:butterfly/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>3425:dolphin</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="3425:dolphin:dolphin/image.png" width="96px" />
+<img src="3425:dolphin:dolphin/attention_learned.png" width="96px" />
+<img src="3425:dolphin:dolphin/attention_last_layer.png" width="96px" />
+<img src="3425:dolphin:dolphin/attention_all_layers.png" width="96px" />
+<img src="3425:dolphin:dolphin/gradient_x_input.png" width="96px" />
+<img src="3425:dolphin:dolphin/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>3443:turtle</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="3443:turtle:turtle/image.png" width="96px" />
+<img src="3443:turtle:turtle/attention_learned.png" width="96px" />
+<img src="3443:turtle:turtle/attention_last_layer.png" width="96px" />
+<img src="3443:turtle:turtle/attention_all_layers.png" width="96px" />
+<img src="3443:turtle:turtle/gradient_x_input.png" width="96px" />
+<img src="3443:turtle:turtle/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>3472:chimpanzee</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="3472:chimpanzee:chimpanzee/image.png" width="96px" />
+<img src="3472:chimpanzee:chimpanzee/attention_learned.png" width="96px" />
+<img src="3472:chimpanzee:chimpanzee/attention_last_layer.png" width="96px" />
+<img src="3472:chimpanzee:chimpanzee/attention_all_layers.png" width="96px" />
+<img src="3472:chimpanzee:chimpanzee/gradient_x_input.png" width="96px" />
+<img src="3472:chimpanzee:chimpanzee/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>3473:cup</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="3473:cup:cup/image.png" width="96px" />
+<img src="3473:cup:cup/attention_learned.png" width="96px" />
+<img src="3473:cup:cup/attention_last_layer.png" width="96px" />
+<img src="3473:cup:cup/attention_all_layers.png" width="96px" />
+<img src="3473:cup:cup/gradient_x_input.png" width="96px" />
+<img src="3473:cup:cup/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>34:tank</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="34:tank:tank/image.png" width="96px" />
+<img src="34:tank:tank/attention_learned.png" width="96px" />
+<img src="34:tank:tank/attention_last_layer.png" width="96px" />
+<img src="34:tank:tank/attention_all_layers.png" width="96px" />
+<img src="34:tank:tank/gradient_x_input.png" width="96px" />
+<img src="34:tank:tank/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>3502:pear</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="3502:pear:pear/image.png" width="96px" />
+<img src="3502:pear:pear/attention_learned.png" width="96px" />
+<img src="3502:pear:pear/attention_last_layer.png" width="96px" />
+<img src="3502:pear:pear/attention_all_layers.png" width="96px" />
+<img src="3502:pear:pear/gradient_x_input.png" width="96px" />
+<img src="3502:pear:pear/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>3590:train</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="3590:train:train/image.png" width="96px" />
+<img src="3590:train:train/attention_learned.png" width="96px" />
+<img src="3590:train:train/attention_last_layer.png" width="96px" />
+<img src="3590:train:train/attention_all_layers.png" width="96px" />
+<img src="3590:train:train/gradient_x_input.png" width="96px" />
+<img src="3590:train:train/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>3618:spider</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="3618:spider:spider/image.png" width="96px" />
+<img src="3618:spider:spider/attention_learned.png" width="96px" />
+<img src="3618:spider:spider/attention_last_layer.png" width="96px" />
+<img src="3618:spider:spider/attention_all_layers.png" width="96px" />
+<img src="3618:spider:spider/gradient_x_input.png" width="96px" />
+<img src="3618:spider:spider/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>3622:bowl</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="3622:bowl:bowl/image.png" width="96px" />
+<img src="3622:bowl:bowl/attention_learned.png" width="96px" />
+<img src="3622:bowl:bowl/attention_last_layer.png" width="96px" />
+<img src="3622:bowl:bowl/attention_all_layers.png" width="96px" />
+<img src="3622:bowl:bowl/gradient_x_input.png" width="96px" />
+<img src="3622:bowl:bowl/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>3782:plain</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="3782:plain:plain/image.png" width="96px" />
+<img src="3782:plain:plain/attention_learned.png" width="96px" />
+<img src="3782:plain:plain/attention_last_layer.png" width="96px" />
+<img src="3782:plain:plain/attention_all_layers.png" width="96px" />
+<img src="3782:plain:plain/gradient_x_input.png" width="96px" />
+<img src="3782:plain:plain/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>3830:wolf</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="3830:wolf:bear/image.png" width="96px" />
+<img src="3830:wolf:bear/attention_learned.png" width="96px" />
+<img src="3830:wolf:bear/attention_last_layer.png" width="96px" />
+<img src="3830:wolf:bear/attention_all_layers.png" width="96px" />
+<img src="3830:wolf:bear/gradient_x_input.png" width="96px" />
+<img src="3830:wolf:bear/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>3946:table</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="3946:table:table/image.png" width="96px" />
+<img src="3946:table:table/attention_learned.png" width="96px" />
+<img src="3946:table:table/attention_last_layer.png" width="96px" />
+<img src="3946:table:table/attention_all_layers.png" width="96px" />
+<img src="3946:table:table/gradient_x_input.png" width="96px" />
+<img src="3946:table:table/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4005:turtle</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4005:turtle:turtle/image.png" width="96px" />
+<img src="4005:turtle:turtle/attention_learned.png" width="96px" />
+<img src="4005:turtle:turtle/attention_last_layer.png" width="96px" />
+<img src="4005:turtle:turtle/attention_all_layers.png" width="96px" />
+<img src="4005:turtle:turtle/gradient_x_input.png" width="96px" />
+<img src="4005:turtle:turtle/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4046:orchid</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4046:orchid:orchid/image.png" width="96px" />
+<img src="4046:orchid:orchid/attention_learned.png" width="96px" />
+<img src="4046:orchid:orchid/attention_last_layer.png" width="96px" />
+<img src="4046:orchid:orchid/attention_all_layers.png" width="96px" />
+<img src="4046:orchid:orchid/gradient_x_input.png" width="96px" />
+<img src="4046:orchid:orchid/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4100:fox</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4100:fox:fox/image.png" width="96px" />
+<img src="4100:fox:fox/attention_learned.png" width="96px" />
+<img src="4100:fox:fox/attention_last_layer.png" width="96px" />
+<img src="4100:fox:fox/attention_all_layers.png" width="96px" />
+<img src="4100:fox:fox/gradient_x_input.png" width="96px" />
+<img src="4100:fox:fox/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>412:trout</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="412:trout:trout/image.png" width="96px" />
+<img src="412:trout:trout/attention_learned.png" width="96px" />
+<img src="412:trout:trout/attention_last_layer.png" width="96px" />
+<img src="412:trout:trout/attention_all_layers.png" width="96px" />
+<img src="412:trout:trout/gradient_x_input.png" width="96px" />
+<img src="412:trout:trout/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4230:dinosaur</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4230:dinosaur:dinosaur/image.png" width="96px" />
+<img src="4230:dinosaur:dinosaur/attention_learned.png" width="96px" />
+<img src="4230:dinosaur:dinosaur/attention_last_layer.png" width="96px" />
+<img src="4230:dinosaur:dinosaur/attention_all_layers.png" width="96px" />
+<img src="4230:dinosaur:dinosaur/gradient_x_input.png" width="96px" />
+<img src="4230:dinosaur:dinosaur/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4250:bottle</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4250:bottle:bottle/image.png" width="96px" />
+<img src="4250:bottle:bottle/attention_learned.png" width="96px" />
+<img src="4250:bottle:bottle/attention_last_layer.png" width="96px" />
+<img src="4250:bottle:bottle/attention_all_layers.png" width="96px" />
+<img src="4250:bottle:bottle/gradient_x_input.png" width="96px" />
+<img src="4250:bottle:bottle/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4337:butterfly</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4337:butterfly:orchid/image.png" width="96px" />
+<img src="4337:butterfly:orchid/attention_learned.png" width="96px" />
+<img src="4337:butterfly:orchid/attention_last_layer.png" width="96px" />
+<img src="4337:butterfly:orchid/attention_all_layers.png" width="96px" />
+<img src="4337:butterfly:orchid/gradient_x_input.png" width="96px" />
+<img src="4337:butterfly:orchid/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>437:palm_tree</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="437:palm_tree:palm_tree/image.png" width="96px" />
+<img src="437:palm_tree:palm_tree/attention_learned.png" width="96px" />
+<img src="437:palm_tree:palm_tree/attention_last_layer.png" width="96px" />
+<img src="437:palm_tree:palm_tree/attention_all_layers.png" width="96px" />
+<img src="437:palm_tree:palm_tree/gradient_x_input.png" width="96px" />
+<img src="437:palm_tree:palm_tree/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4404:snake</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4404:snake:snake/image.png" width="96px" />
+<img src="4404:snake:snake/attention_learned.png" width="96px" />
+<img src="4404:snake:snake/attention_last_layer.png" width="96px" />
+<img src="4404:snake:snake/attention_all_layers.png" width="96px" />
+<img src="4404:snake:snake/gradient_x_input.png" width="96px" />
+<img src="4404:snake:snake/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>443:bear</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="443:bear:bear/image.png" width="96px" />
+<img src="443:bear:bear/attention_learned.png" width="96px" />
+<img src="443:bear:bear/attention_last_layer.png" width="96px" />
+<img src="443:bear:bear/attention_all_layers.png" width="96px" />
+<img src="443:bear:bear/gradient_x_input.png" width="96px" />
+<img src="443:bear:bear/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4510:motorcycle</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4510:motorcycle:motorcycle/image.png" width="96px" />
+<img src="4510:motorcycle:motorcycle/attention_learned.png" width="96px" />
+<img src="4510:motorcycle:motorcycle/attention_last_layer.png" width="96px" />
+<img src="4510:motorcycle:motorcycle/attention_all_layers.png" width="96px" />
+<img src="4510:motorcycle:motorcycle/gradient_x_input.png" width="96px" />
+<img src="4510:motorcycle:motorcycle/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4560:willow_tree</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4560:willow_tree:pine_tree/image.png" width="96px" />
+<img src="4560:willow_tree:pine_tree/attention_learned.png" width="96px" />
+<img src="4560:willow_tree:pine_tree/attention_last_layer.png" width="96px" />
+<img src="4560:willow_tree:pine_tree/attention_all_layers.png" width="96px" />
+<img src="4560:willow_tree:pine_tree/gradient_x_input.png" width="96px" />
+<img src="4560:willow_tree:pine_tree/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4571:elephant</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4571:elephant:elephant/image.png" width="96px" />
+<img src="4571:elephant:elephant/attention_learned.png" width="96px" />
+<img src="4571:elephant:elephant/attention_last_layer.png" width="96px" />
+<img src="4571:elephant:elephant/attention_all_layers.png" width="96px" />
+<img src="4571:elephant:elephant/gradient_x_input.png" width="96px" />
+<img src="4571:elephant:elephant/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4574:porcupine</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4574:porcupine:mouse/image.png" width="96px" />
+<img src="4574:porcupine:mouse/attention_learned.png" width="96px" />
+<img src="4574:porcupine:mouse/attention_last_layer.png" width="96px" />
+<img src="4574:porcupine:mouse/attention_all_layers.png" width="96px" />
+<img src="4574:porcupine:mouse/gradient_x_input.png" width="96px" />
+<img src="4574:porcupine:mouse/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4581:bear</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4581:bear:bear/image.png" width="96px" />
+<img src="4581:bear:bear/attention_learned.png" width="96px" />
+<img src="4581:bear:bear/attention_last_layer.png" width="96px" />
+<img src="4581:bear:bear/attention_all_layers.png" width="96px" />
+<img src="4581:bear:bear/gradient_x_input.png" width="96px" />
+<img src="4581:bear:bear/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4620:oak_tree</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4620:oak_tree:oak_tree/image.png" width="96px" />
+<img src="4620:oak_tree:oak_tree/attention_learned.png" width="96px" />
+<img src="4620:oak_tree:oak_tree/attention_last_layer.png" width="96px" />
+<img src="4620:oak_tree:oak_tree/attention_all_layers.png" width="96px" />
+<img src="4620:oak_tree:oak_tree/gradient_x_input.png" width="96px" />
+<img src="4620:oak_tree:oak_tree/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4674:streetcar</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4674:streetcar:streetcar/image.png" width="96px" />
+<img src="4674:streetcar:streetcar/attention_learned.png" width="96px" />
+<img src="4674:streetcar:streetcar/attention_last_layer.png" width="96px" />
+<img src="4674:streetcar:streetcar/attention_all_layers.png" width="96px" />
+<img src="4674:streetcar:streetcar/gradient_x_input.png" width="96px" />
+<img src="4674:streetcar:streetcar/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4684:mountain</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4684:mountain:mountain/image.png" width="96px" />
+<img src="4684:mountain:mountain/attention_learned.png" width="96px" />
+<img src="4684:mountain:mountain/attention_last_layer.png" width="96px" />
+<img src="4684:mountain:mountain/attention_all_layers.png" width="96px" />
+<img src="4684:mountain:mountain/gradient_x_input.png" width="96px" />
+<img src="4684:mountain:mountain/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4700:beaver</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4700:beaver:mouse/image.png" width="96px" />
+<img src="4700:beaver:mouse/attention_learned.png" width="96px" />
+<img src="4700:beaver:mouse/attention_last_layer.png" width="96px" />
+<img src="4700:beaver:mouse/attention_all_layers.png" width="96px" />
+<img src="4700:beaver:mouse/gradient_x_input.png" width="96px" />
+<img src="4700:beaver:mouse/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4708:cloud</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4708:cloud:cloud/image.png" width="96px" />
+<img src="4708:cloud:cloud/attention_learned.png" width="96px" />
+<img src="4708:cloud:cloud/attention_last_layer.png" width="96px" />
+<img src="4708:cloud:cloud/attention_all_layers.png" width="96px" />
+<img src="4708:cloud:cloud/gradient_x_input.png" width="96px" />
+<img src="4708:cloud:cloud/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4864:tulip</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4864:tulip:tulip/image.png" width="96px" />
+<img src="4864:tulip:tulip/attention_learned.png" width="96px" />
+<img src="4864:tulip:tulip/attention_last_layer.png" width="96px" />
+<img src="4864:tulip:tulip/attention_all_layers.png" width="96px" />
+<img src="4864:tulip:tulip/gradient_x_input.png" width="96px" />
+<img src="4864:tulip:tulip/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4896:seal</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4896:seal:seal/image.png" width="96px" />
+<img src="4896:seal:seal/attention_learned.png" width="96px" />
+<img src="4896:seal:seal/attention_last_layer.png" width="96px" />
+<img src="4896:seal:seal/attention_all_layers.png" width="96px" />
+<img src="4896:seal:seal/gradient_x_input.png" width="96px" />
+<img src="4896:seal:seal/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>4987:orchid</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="4987:orchid:spider/image.png" width="96px" />
+<img src="4987:orchid:spider/attention_learned.png" width="96px" />
+<img src="4987:orchid:spider/attention_last_layer.png" width="96px" />
+<img src="4987:orchid:spider/attention_all_layers.png" width="96px" />
+<img src="4987:orchid:spider/gradient_x_input.png" width="96px" />
+<img src="4987:orchid:spider/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>516:elephant</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="516:elephant:elephant/image.png" width="96px" />
+<img src="516:elephant:elephant/attention_learned.png" width="96px" />
+<img src="516:elephant:elephant/attention_last_layer.png" width="96px" />
+<img src="516:elephant:elephant/attention_all_layers.png" width="96px" />
+<img src="516:elephant:elephant/gradient_x_input.png" width="96px" />
+<img src="516:elephant:elephant/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>574:fox</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="574:fox:fox/image.png" width="96px" />
+<img src="574:fox:fox/attention_learned.png" width="96px" />
+<img src="574:fox:fox/attention_last_layer.png" width="96px" />
+<img src="574:fox:fox/attention_all_layers.png" width="96px" />
+<img src="574:fox:fox/gradient_x_input.png" width="96px" />
+<img src="574:fox:fox/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>5:bus</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="5:bus:bus/image.png" width="96px" />
+<img src="5:bus:bus/attention_learned.png" width="96px" />
+<img src="5:bus:bus/attention_last_layer.png" width="96px" />
+<img src="5:bus:bus/attention_all_layers.png" width="96px" />
+<img src="5:bus:bus/gradient_x_input.png" width="96px" />
+<img src="5:bus:bus/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>5:television</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="5:television:television/image.png" width="96px" />
+<img src="5:television:television/attention_learned.png" width="96px" />
+<img src="5:television:television/attention_last_layer.png" width="96px" />
+<img src="5:television:television/attention_all_layers.png" width="96px" />
+<img src="5:television:television/gradient_x_input.png" width="96px" />
+<img src="5:television:television/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>704:cra</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="704:cra:lobster/image.png" width="96px" />
+<img src="704:cra:lobster/attention_learned.png" width="96px" />
+<img src="704:cra:lobster/attention_last_layer.png" width="96px" />
+<img src="704:cra:lobster/attention_all_layers.png" width="96px" />
+<img src="704:cra:lobster/gradient_x_input.png" width="96px" />
+<img src="704:cra:lobster/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>740:ray</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="740:ray:ray/image.png" width="96px" />
+<img src="740:ray:ray/attention_learned.png" width="96px" />
+<img src="740:ray:ray/attention_last_layer.png" width="96px" />
+<img src="740:ray:ray/attention_all_layers.png" width="96px" />
+<img src="740:ray:ray/gradient_x_input.png" width="96px" />
+<img src="740:ray:ray/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>749:mouse</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="749:mouse:mouse/image.png" width="96px" />
+<img src="749:mouse:mouse/attention_learned.png" width="96px" />
+<img src="749:mouse:mouse/attention_last_layer.png" width="96px" />
+<img src="749:mouse:mouse/attention_all_layers.png" width="96px" />
+<img src="749:mouse:mouse/gradient_x_input.png" width="96px" />
+<img src="749:mouse:mouse/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>860:streetcar</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="860:streetcar:streetcar/image.png" width="96px" />
+<img src="860:streetcar:streetcar/attention_learned.png" width="96px" />
+<img src="860:streetcar:streetcar/attention_last_layer.png" width="96px" />
+<img src="860:streetcar:streetcar/attention_all_layers.png" width="96px" />
+<img src="860:streetcar:streetcar/gradient_x_input.png" width="96px" />
+<img src="860:streetcar:streetcar/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>866:telephone</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="866:telephone:telephone/image.png" width="96px" />
+<img src="866:telephone:telephone/attention_learned.png" width="96px" />
+<img src="866:telephone:telephone/attention_last_layer.png" width="96px" />
+<img src="866:telephone:telephone/attention_all_layers.png" width="96px" />
+<img src="866:telephone:telephone/gradient_x_input.png" width="96px" />
+<img src="866:telephone:telephone/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>901:cockroach</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="901:cockroach:cockroach/image.png" width="96px" />
+<img src="901:cockroach:cockroach/attention_learned.png" width="96px" />
+<img src="901:cockroach:cockroach/attention_last_layer.png" width="96px" />
+<img src="901:cockroach:cockroach/attention_all_layers.png" width="96px" />
+<img src="901:cockroach:cockroach/gradient_x_input.png" width="96px" />
+<img src="901:cockroach:cockroach/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>946:plain</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="946:plain:plain/image.png" width="96px" />
+<img src="946:plain:plain/attention_learned.png" width="96px" />
+<img src="946:plain:plain/attention_last_layer.png" width="96px" />
+<img src="946:plain:plain/attention_all_layers.png" width="96px" />
+<img src="946:plain:plain/gradient_x_input.png" width="96px" />
+<img src="946:plain:plain/int_gradients.png" width="96px" />
+</div>
+<div class="titles">
+<span>966:snake</span>
+<span>attn learned</span>
+<span>attn last layer</span>
+<span>attn all layers</span>
+<span>grad x input</span>
+<span>int gradients</span>
+</div>
+<div class="example">
+<img src="966:snake:snake/image.png" width="96px" />
+<img src="966:snake:snake/attention_learned.png" width="96px" />
+<img src="966:snake:snake/attention_last_layer.png" width="96px" />
+<img src="966:snake:snake/attention_all_layers.png" width="96px" />
+<img src="966:snake:snake/gradient_x_input.png" width="96px" />
+<img src="966:snake:snake/int_gradients.png" width="96px" />
+</div>
+
+
+</body>
+</html>

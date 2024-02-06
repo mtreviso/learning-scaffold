@@ -1,0 +1,44 @@
+With the meta-learned teacher explainer static:
+KL=0:
+Test pearson (real): 0.4900; Test neg_rmse (real): -0.7737
+Test pearson (sim): 0.7775; Test neg_rmse (sim): -0.3144
+
+
+KL=5:
+Test pearson (real): 0.5293; Test neg_rmse (real): -0.7895
+Test pearson (sim): 0.8142; Test neg_rmse (sim): -0.3245
+
+
+Usando a head 9, 5:
+Test pearson (real): 0.5451; Test neg_rmse (real): -0.7321
+Test pearson (sim): 0.8388; Test neg_rmse (sim): -0.2623
+
+
+Patrick's KL=5 with metalearned teacher and student:
+Test pearson (real): 0.5293; Test neg_rmse (real): -0.7895
+Test pearson (sim): 0.87; Test neg_rmse (sim): -0.3245
+
+
+Patrick's head 9, 5:
+Test pearson (real): 
+Test pearson (sim): 0.73
+
+
+New Model KL=5 and seed 9
+Test pearson (real): 0.5406; Test neg_rmse (real): -0.7353
+Test pearson (sim): 0.8364; Test neg_rmse (sim): -0.2895
+
+New Model head 113 and seed 9
+Test pearson (real): 0.5198; Test neg_rmse (real): -0.7841
+Test pearson (sim): 0.7928; Test neg_rmse (sim): -0.5091
+
+> testar com novos modelos (setando do_save=False)
+	- metalearned: /home/patrick/mlqe-xlmr-models.tgz
+	- head 113: /home/patrick/mlqe-xlmr-head113.tgz
+	- vit: /home/patrick/cifar100-vit-models.tgz
+
+
+[done] Esse fds vou focar em testar plausiblity e simulability para cada lp
+[done] O Graham comentou sobre fazer um notebook que ele poderia explorar
+[doing] E tbm fazer as visualizações pra vit
+
